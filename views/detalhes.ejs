@@ -1,0 +1,54 @@
+
+<%-include('partials/header.ejs'); %>
+<body>
+    <%-include('partials/navbar.ejs'); %>
+   
+
+    <div class="container">      
+       
+            <div class="card mb-4">
+                <div class="card-header mb-2">
+
+                    Dados do funcionario
+                </div>
+                <div class="card-body">
+
+                  
+
+                    <ul class="list-group">
+                        <li class="list-group-item list-group-item-action active">ID do funcionario: <%=cadastro.id%></li>
+                        <li class="list-group-item">Nome: <%=cadastro.nome_completo%></li>
+                        <li class="list-group-item">Data de admissão: <%=cadastro.data_entrada%></li>
+                        <li class="list-group-item">CPF: <%=cadastro.cpf%></li>
+                        <li class="list-group-item">Sexo: <%=cadastro.sexo %></li>
+                        <li class="list-group-item">Identidade: <%=cadastro.identidade%></li>
+                        <li class="list-group-item">Órgão expedidor: <%=cadastro.orgao_expedidor%></li>
+                        <li class="list-group-item">Data de expedição: <%=cadastro.data_expedicao%></li>
+                        <li class="list-group-item">estado civil: <%=cadastro.estado_civil%></li>
+                        <li class="list-group-item">Nacionalidade: <%=cadastro.nacionalidade%></li>
+                        <li class="list-group-item">Naturalidade: <%=cadastro.naturalidade%></li>
+                        <li class="list-group-item">Nome da mãe: <%=cadastro.nome_mae%></li>
+                        <li class="list-group-item">Nome do pai: <%=cadastro.nome_pai%></li>
+                        <li class="list-group-item">Nome do companheiro(a): <%=cadastro.nome_companheiro%></li>
+                        <li class="list-group-item">Endereço completo: <%=cadastro.endereco_completo%></li>
+                        <li class="list-group-item">Bairro: <%=cadastro.bairro%></li>
+                        <li class="list-group-item">Cidade: <%=cadastro.cidade%></li>
+                        <li class="list-group-item">UF: <%=cadastro.uf%></li>
+                        <li class="list-group-item">CEP: <%=cadastro.cep%></li>
+                        <li class="list-group-item">Telefone residencial: <%=cadastro.telefone_residencial%></li>
+                        <li class="list-group-item">Telefone comercial: <%=cadastro.telefone_comercial%></li>
+                        <li class="list-group-item">Telefone celular: <%=cadastro.telefone_celular%></li>
+                        <li class="list-group-item">Email institucional: <%=cadastro.email_institucional%></li>
+                        <li class="list-group-item">Email pessoal: <%=cadastro.email_pessoal%></li>
+                        <li class="list-group-item">Como soube da empresa: <%=cadastro.tipos%></li>
+                        <li class="list-group-item">Sugestão: <%=cadastro.descricao%></li>
+                        <li class="list-group-item">Data de criação do cadastro: <%=cadastro.createdAt%></li>
+                    </ul>
+                    <a href="/editar"><button class="btn btn-dark mt-2">Editar dados</button></a>
+                </div>
+            </div>
+           
+    </div>
+
+</body>
+<%-include('partials/footer.ejs'); %>

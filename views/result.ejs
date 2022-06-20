@@ -1,0 +1,56 @@
+<%-include('partials/header.ejs'); %>
+
+    <body>
+        <%-include('partials/navbar.ejs'); %>
+
+            <div class="container">
+                <a href="/view"><button class="btn btn-dark mb-2">Cadastrar novo funcionario</button></a>
+                <%form.forEach((item)=> {%>
+
+                    
+                   
+                    <div class="card mb-4">
+                        <div class="card-header mb-2">
+
+                            Dados do funcionario
+                        </div>
+                        <div class="card-body">
+                            <ul class="list-group h5">
+                                <li class="list-group-item list-group-item-action active">ID do funcionario: <%=item.id%></li>
+                                <li class="list-group-item">Nome: <%=item.nome_completo%></li>
+                                <li class="list-group-item">Data de admissão: <%=item.data_entrada%></li>
+                                <li class="list-group-item">CPF: <%=item.cpf%></li>
+                                <li class="list-group-item">Sexo: <%=item.sexo %></li>
+                                <li class="list-group-item">Identidade: <%=item.identidade%></li>
+                                <li class="list-group-item">Órgão expedidor: <%=item.orgao_expedidor%></li>
+                                <li class="list-group-item">Data de expedição: <%=item.data_expedicao%></li>
+                                <li class="list-group-item">estado civil: <%=item.estado_civil%></li>
+                                <li class="list-group-item">Nacionalidade: <%=item.nacionalidade%></li>
+                                <li class="list-group-item">Naturalidade: <%=item.naturalidade%></li>
+                                <li class="list-group-item">Nome da mãe: <%=item.nome_mae%></li>
+                                <li class="list-group-item">Nome do pai: <%=item.nome_pai%></li>
+                                <li class="list-group-item">Nome do companheiro(a): <%item.nome_companheiro%></li>
+                                <li class="list-group-item">Endereço completo: <%=item.endereco_completo%></li>
+                                <li class="list-group-item">Bairro: <%=item.bairro%></li>
+                                <li class="list-group-item">Cidade: <%=item.cidade%></li>
+                                <li class="list-group-item">UF: <%=item.uf%></li>
+                                <li class="list-group-item">CEP: <%=item.cep%></li>
+                                <li class="list-group-item">Telefone residencial: <%=item.telefone_residencial%></li>
+                                <li class="list-group-item">Telefone comercial: <%=item.telefone_comercial%></li>
+                                <li class="list-group-item">Telefone celular: <%=item.telefone_celular%></li>
+                                <li class="list-group-item">Email institucional: <%=item.email_institucional%></li>
+                                <li class="list-group-item">Email pessoal: <%=item.email_pessoal%></li>
+                                <li class="list-group-item">Como soube da empresa: <%=item.tipos%></li>
+                                <li class="list-group-item">Sugestão: <%=item.descricao%></li>
+                                <li class="list-group-item">Data de criação do cadastro: <%=item.createdAt%></li>
+                            </ul>
+                            <a href="/detalhes/<%=item.id%>"><button class="btn btn-dark mt-2">Detalhes</button></a>
+                            <a href="/delete/<%=item.id%>"><button class="btn btn-dark mt-2">Deletar</button></a>
+
+                        </div>
+                    </div>
+                    <% }) %>
+            </div>
+
+    </body>
+    <%-include('partials/footer.ejs'); %>

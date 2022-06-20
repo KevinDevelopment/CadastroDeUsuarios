@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="/css/bootstrap.min.css">
+    <link rel="stylesheet" href="/css/login.css">
+</head>
+<body>
+
+    <%-include('partials/navbar.ejs'); %>
+
+    <div class="container-fluid">
+    
+        
+    
+        <section class="">
+            <form method="post" class="needs-validation" action="/Register" novalidate>
+
+            <div class="container-fluid ">
+                <div class="row d-flex justify-content-center align-items-center">
+                    <div class="col-md-9 col-lg-6 col-xl-5">
+                        <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/draw2.webp"
+                            class="img-fluid" alt="Sample image">
+                    </div>
+                    <div class="col-md-8 col-lg-6 col-xl-4 offset-xl-1">
+                        <div class="d-flex flex-row align-items-center justify-content-center justify-content-lg-start">
+                            <p class="lead fw-normal mb-0 me-3">Sign in with</p>
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <img src="/img/2362129-facebook-fb-friends-social_85524.ico" alt="">
+                            </button>
+    
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <img src="/img/2362131-media-social-topic-trend-tweet-twitt_85525.ico" alt="">
+                            </button>
+    
+                            <button type="button" class="btn btn-primary btn-floating mx-1">
+                                <img src="/img/LinkedIn_icon-icons.com_66270.ico" alt="">
+                            </button>
+                        </div>
+    
+                        <div class="divider d-flex align-items-center my-4">
+                            <p class="text-center fw-bold mx-3 mb-0">Or</p>
+                        </div>
+    
+                        <!-- Email input -->
+                        <div class="form-outline mb-4">
+                            <input type="email" name="email" id="email" class="form-control form-control-lg"
+                                placeholder="Enter a valid email address" required />
+                            <label class="form-label" for="form3Example3">Email address</label>
+                            <div class="valid-feedback">
+                                ok
+                              </div>
+                              <div class="invalid-feedback">
+                                Please, insert your email
+                            </div>
+                        </div>
+    
+                        <!-- Password input -->
+                        <div class="form-outline mb-3">
+                            <input type="password" name="password" id="password" class="form-control form-control-lg"
+                                placeholder="Enter password" required />
+                            <label class="form-label" for="form3Example4">Password</label>
+                            <div class="valid-feedback">
+                                ok
+                              </div>
+                              <div class="invalid-feedback">
+                                Please, insert your password
+                            </div>
+                        </div>
+    
+                        
+    
+                        <div class="row g-3 align-items-center">
+    
+                            <div class="col-md-2">
+                                <button  class="btn btn-primary onsubmit">Login</button>
+                            </div>
+    
+                            <div class="col-md-2 ">
+                                <button class="btn btn-primary">Register</button>
+                            </div>
+    
+    
+                        </div>
+    
+                    </div>
+                </div>
+            </div>
+            
+        </form>
+        </section>
+    
+    
+    
+    
+    </div>
+    <script>
+        (function () {
+  'use strict'
+
+  // Fetch all the forms we want to apply custom Bootstrap validation styles to
+  var forms = document.querySelectorAll('.needs-validation')
+
+  // Loop over them and prevent submission
+  Array.prototype.slice.call(forms)
+    .forEach(function (form) {
+      form.addEventListener('submit', function (event) {
+        if (!form.checkValidity()) {
+          event.preventDefault()
+          event.stopPropagation()
+        }
+
+        form.classList.add('was-validated')
+      }, false)
+    })
+})()
+    </script>
+</body>
+<%-include('partials/footer.ejs'); %>

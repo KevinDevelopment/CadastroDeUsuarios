@@ -1,0 +1,315 @@
+
+<%-include('partials/header.ejs'); %>
+<body>   
+    
+    <%-include('partials/navbar.ejs'); %>
+
+    <div class="container">
+
+        <div class="card">
+            <div class="card-header">
+                Cadastro de funcionário
+            </div>
+            <div class="card-body">
+                <form method="post" action="/inserir" class="row g-3 needs-validation" novalidate>
+
+                    <div class="col-md-2">
+                        <input type="text" placeholder="id" name="id" class="form-control">
+                    </div>
+
+                    <div class="col-md-12">
+                        <input type="text" name="nome" id="nome" placeholder="Nome completo(sem abreviações)*"
+                            class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="date" name="data1" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" placeholder="CPF*" name="cpf" id="cpf" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="sexo" placeholder="Sexo*" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo!
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" placeholder="identidade*" name="identidade" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="orgao_expedidor" placeholder="Órgão expedidor/UF*"
+                            class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="date" name="data2" placeholder="Data de expedição*" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" name="estado_civil" placeholder="Estado civil" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" placeholder="Nacionalidade" name="nacionalidade" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-4">
+                        <input type="text" name="naturalidade" placeholder="Naturalidade" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="nome_mae" placeholder="Filiação: Nome da mãe*" class="form-control"
+                            required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="nome_pai" placeholder="Nome do pai*" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-12">
+                        <input type="text" name="nome_companheiro" placeholder="Nome do cônjuge/Companheiro(a)"
+                            class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="endereco" placeholder="Endereço completo*" class="form-control"
+                            required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="bairro" placeholder="Bairro*" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-3">
+                        <input type="text" name="cidade" placeholder="Cidade" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-1">
+                        <input type="text" name="uf" placeholder="UF" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="cep" placeholder="CEP*" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="tel_res" placeholder="(DDD)Residencial" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="tel_com" placeholder="(DDD)Comercial*" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-2">
+                        <input type="text" name="tel_cel" placeholder="(DDD)Celular*" class="form-control" required>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="email_int" placeholder="Email institucional" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <div class="col-md-6">
+                        <input type="text" name="email_pes" placeholder="Email pessoal" class="form-control">
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+                    <label for="">como conheceu a empresa:</label>
+
+                    <select class="form-select" name="tipos" aria-label="Default select example">
+                        <option value="0"></option>
+                        <option value="Redes sociais">Redes sociais</option>
+                        <option value="Indicação">Indicação</option>
+                        <option value="Amigos">Amigos</option>
+                        <option value="Site">Site</option>
+                        <option value="Google">Google</option>
+                        <option value="Passei em frente">Passei em frente</option>
+                    </select>
+
+                    <div class="col-md-12">
+                        <textarea name="descricao" id="" cols="30" rows="5"
+                            placeholder="tem alguma sugestão de melhoria? descreva aqui "
+                            class="form-control"></textarea>
+                        <div class="valid-feedback">
+                            Tudo certo
+                        </div>
+                        <div class="invalid-feedback">
+                            Ops!
+                        </div>
+                    </div>
+
+
+
+                    <button type="submit" class="btn btn-info">Enviar</button>
+                </form>
+            </div>
+        </div>
+
+
+    </div>
+
+
+
+
+
+    <script>
+        // JavaScript inicial para desativar envios de formulário, se houver campos inválidos.
+        (function () {
+            'use strict';
+            window.addEventListener('load', function () {
+                // Pega todos os formulários que nós queremos aplicar estilos de validação Bootstrap personalizados.
+                var forms = document.getElementsByClassName('needs-validation');
+                // Faz um loop neles e evita o envio
+                var validation = Array.prototype.filter.call(forms, function (form) {
+                    form.addEventListener('submit', function (event) {
+                        if (form.checkValidity() === false) {
+                            event.preventDefault();
+                            event.stopPropagation();
+                        }
+                        form.classList.add('was-validated');
+                    }, false);
+                });
+            }, false);
+        })();
+    </script>
+
+</body>
+<%-include('partials/footer.ejs'); %>
